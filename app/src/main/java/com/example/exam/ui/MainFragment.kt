@@ -18,12 +18,13 @@ import com.example.exam.databinding.FragmentMainBinding
 import com.example.exam.recyclerView.UserAdapter
 import com.example.exam.userData.Response
 import com.squareup.picasso.Picasso
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class MainFragment : Fragment() {
 
-    private val loginViewModel by viewModel<LoginUserViewModel>()
+    private val loginViewModel by sharedViewModel<LoginUserViewModel>()
     private val mainViewModel by viewModel<MainViewModel>()
 
     override fun onCreateView(
@@ -36,6 +37,7 @@ class MainFragment : Fragment() {
             container,
             false
         )
+
         val adapter = UserAdapter()
         binding.userList.adapter = adapter
 

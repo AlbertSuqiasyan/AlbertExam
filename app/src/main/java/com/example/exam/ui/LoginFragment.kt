@@ -13,12 +13,13 @@ import com.example.exam.LoginUserViewModel
 
 import com.example.exam.R
 import com.example.exam.databinding.FragmentLoginBinding
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class LoginFragment : Fragment() {
 
-    private val loginUserViewModel by viewModel<LoginUserViewModel>()
+    private val loginUserViewModel by sharedViewModel<LoginUserViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

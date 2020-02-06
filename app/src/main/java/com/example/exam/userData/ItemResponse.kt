@@ -1,6 +1,10 @@
 package com.example.exam.userData
 
+import com.squareup.moshi.Json
+
 data class ItemResponse(
-    val response: List<Response>,
-    val status: String
+    @Json(name = "status")
+    val status: String,
+    @Json(name = "response")
+    val response: List<Response>
 )

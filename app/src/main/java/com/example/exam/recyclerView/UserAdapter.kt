@@ -1,11 +1,8 @@
 package com.example.exam.recyclerView
 
-import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import androidx.recyclerview.widget.RecyclerView
-import com.example.exam.R
 import com.example.exam.userData.Response
 
 class UserAdapter : ListAdapter<Response, ViewHolder>(UserDiffCallBack()) {
@@ -23,6 +20,7 @@ class UserAdapter : ListAdapter<Response, ViewHolder>(UserDiffCallBack()) {
     fun filterList(filteredList: ArrayList<Response>) {
         submitList(filteredList)
     }
+
 }
 
 class UserDiffCallBack : DiffUtil.ItemCallback<Response>() {

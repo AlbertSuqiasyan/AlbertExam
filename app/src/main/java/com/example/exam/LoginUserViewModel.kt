@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.exam.network.UserApi
 import com.example.exam.userData.DefaultResponse
+import com.example.exam.userData.UserRequest
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -17,7 +18,7 @@ class LoginUserViewModel : ViewModel() {
     val defaultResponse:LiveData<DefaultResponse> = _defaultResponse
 
     fun createUser(userName: String, password: String, view: View) {
-        UserApi.retrofitService.createUser(userName, password)
+        UserApi.retrofitService.createUser2(userRequest = UserRequest(userName, password))
             .enqueue(object : Callback<DefaultResponse> {
                 override fun onFailure(call: Call<DefaultResponse>, t: Throwable) {
                     Toast.makeText(view.context, t.message.toString(), Toast.LENGTH_SHORT).show()
