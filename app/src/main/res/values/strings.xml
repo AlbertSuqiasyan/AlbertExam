@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Exam</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">UserName</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="show_item_id">SHOW_ITEM_ID</string>
+    <string name="show_item_title">SHOW_ITEM_TITLE</string>
+    <string name="id_show_user_id">id: SHOW_USER_ID</string>
+    <string name="name_show_user_name">Name: SHOW_USER_NAME</string>
+    <string name="log_out">Log Out</string>
+</resources>
